@@ -6,7 +6,7 @@ const path = require("path");
 const fs = require("fs");
 const { resourceLimits } = require("worker_threads");
 
-const carpetaUpload = path.join(__dirname, "../upload");
+const carpetaUpload = path.join(__dirname, "../upload"); //path del directorio donde se guardarán las imagenes
 
 var storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -16,6 +16,8 @@ var storage = multer.diskStorage({
     cb(null, file.originalname + "-" + Date.now());
   },
 });
+
+// Mantener campos requeridos consistentes
 
 var upload = multer({
   storage: storage,
@@ -56,7 +58,7 @@ router.post("/add", upload, async (req, res) => {
     });
 });
 
-//editar
+//editar articulo en la base de datos y actualizarlo
 router.get("/edit/:id", async (req, res) => {
   const id = req.params.id.trim();
 
