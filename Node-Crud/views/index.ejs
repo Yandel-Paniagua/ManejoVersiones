@@ -4,6 +4,8 @@
   body {
     background-color: #5770ab; /* Cambia el color a tu preferencia */
   }
+
+/* Estilo para la tabla */
 </style>
 
 <div class="container">
@@ -34,9 +36,9 @@
                   class="img-thumbnail"
                 />
               </td>
-              <td><%=user.descripcion %></td>
-              <td><%= user.cantidad %></td>
-              <td><%= user.precio %></td>
+              <td><%=user.descripcion   %></td>
+              <td><%= user.cantidad  %></td>
+              <td><%= user.precio   %></td>
               <td>
                 <a href="/edit/ <%= user._id %>"
                   ><i class="fa fa-edit fa-lg"></i
