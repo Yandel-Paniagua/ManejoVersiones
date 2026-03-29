@@ -10,6 +10,8 @@
 
 </style>
 
+<!-- agregar validación de ID antes de actualizar -->
+
 <div class="container px-5 my-5">
   <div class="row mb-3">
     <h1>Editando Aritculo (<%= user.name  %>) </h1>
@@ -44,7 +46,7 @@
             id="formFile"
           />
         </div>
-        
+          
         <div class="mb-3">
           <label for="image" class="form-label">Foto</label>
           <input name="image" class="form-control"  value="<%= user.image  %>"  type="file" />
