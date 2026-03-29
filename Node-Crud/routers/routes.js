@@ -58,7 +58,7 @@ router.post("/add", upload, async (req, res) => {
     });
 });
 
-//editar
+//editar articulo en la base de datos y actualizarlo
 router.get("/edit/:id", async (req, res) => {
   const id = req.params.id.trim();
 
