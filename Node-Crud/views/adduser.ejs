@@ -1,0 +1,89 @@
+<%- include('layouts/header') %>
+
+<style>
+  body {
+    background-color: #5770AB; 
+  }
+</style>
+
+<div class="container px-5 my-5">
+  <div class="row">
+    <h1>Pagina de agregar articulos</h1>
+    <div class="col-md-6">
+    <div class="col-md-6">
+      
+      <form
+        id="add-form-label"
+        action="/add"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="code" class="form-label">Codigo</label>
+            <input
+              class="form-control"
+              id="code"
+              name="code"
+              type="number"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="name" class="form-label">Nombre</label>
+            <input
+              class="form-control"
+              id="name"
+              name="name"
+              type="text"
+              required
+            />
+          </div>
+        </div>
+        </div>
+        <div class="mb-3">
+          <label for="image" class="form-label">Foto</label>
+          <input name="image" class="form-control" type="file" required />
+        </div>
+        <div class="d-grid">
+          <div class="mb-3">
+          <label for="descripcion" class="form-label">Descripción</label>
+          <input
+            class="form-control"
+            id="descripcion"
+            name="descripcion"
+            type="descripcion"
+            id="formFile"
+          />
+          <div class="mb-3">
+          <label for="cantidad" class="form-label">Cantidad disponible</label>
+          <input
+            class="form-control"
+            id="cantidad"
+            name="cantidad"
+            type="number"
+            id="formFile"
+          />
+        </div>
+          <div class="mb-3">
+          <label for="precio" class="form-label">Precio</label>
+          <input
+            class="form-control"
+            id="precio"
+            name="precio"
+            type="number"
+            id="formFile"
+          />
+        </div>
+          <input
+            type="submit"
+            class="btn btn-primary btn-lg"
+            value="Agregar articulo"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include('layouts/footer') %>
