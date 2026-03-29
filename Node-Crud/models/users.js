@@ -6,6 +6,9 @@ const userSchema = new Schema({
   ArticleName: {
     type: String,
     required: true,
+
+
+
   },
   Code: {
     type: Number,
@@ -68,6 +71,8 @@ const userSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+
+// Gestionar casos de prueba
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;
