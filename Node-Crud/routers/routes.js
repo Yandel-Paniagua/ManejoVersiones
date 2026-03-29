@@ -17,6 +17,8 @@ var storage = multer.diskStorage({
   },
 });
 
+// Mantener campos requeridos consistentes
+
 var upload = multer({
   storage: storage,
 }).single("image");
